@@ -36,4 +36,8 @@ public class UserService {
             throw new RuntimeException("Wrong email or password");
         }
     }
+
+    public Optional<User> findById(int id) {
+        return userRepo.findById(id);
+    }
 }
